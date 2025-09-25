@@ -41,29 +41,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${firaCode.variable} font-mono antialiased min-h-screen flex flex-col relative overflow-x-hidden`}>
         <Navbar />
-        {/* Glows floutés fixes côté droit */}
-        <div
-          className="pointer-events-none fixed -z-10"
-          style={{
-            top: "80px",
-            right: "160px",
-            width: "320px",
-            height: "280px",
-            background: "(58% 58% at 60% 40%, rgba(0,213,190,0.28), transparent)",
-            filter: "blur(174px)",
-          }}
-        />
-        <div
-          className="pointer-events-none fixed -z-10"
-          style={{
-            top: "340px",
-            right: "80px",
-            width: "380px",
-            height: "220px",
-            background: "(56% 56% at 70% 65%, rgba(97,95,255,0.26), transparent)",
-            filter: "blur(174px)",
-          }}
-        />
+        {/* Glows déplacés au niveau des pages via <BackgroundGlows /> */}
         <main className="flex-1">
           {children}
         </main>

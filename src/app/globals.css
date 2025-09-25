@@ -38,15 +38,34 @@
 }
 
 body {
-  /* Halos radiaux à droite (vert + violet) sur fond #0F172B */
-  background:
-    radial-gradient(900px 520px at 80% 22%, rgba(0,213,190,0.20), transparent),
-    radial-gradient(780px 460px at 88% 68%, rgba(97,95,255,0.22), transparent),
-    var(--background);
+  /* Fond neutre, glows gérés par composant BackgroundGlows par page */
+  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-fira), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .container {
   max-width: var(--container-2xl);
+}
+
+/* Styles pour le bloc de code de AboutEditor */
+.code-block {
+  font-family: "Fira Code", var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: #90A1B9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.code-block p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.line {
+  display: inline-block;
+  width: 30px;
+  color: #90A1B9;
+  user-select: none;
 }
