@@ -33,6 +33,13 @@ function ItemIcon({ id }: { id: string }) {
           <path fill="currentColor" d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
         </svg>
       );
+    case "skills":
+      // folder icon (sky)
+      return (
+        <svg className={`${base} text-sky-400`} viewBox="0 0 24 24" aria-hidden>
+          <path fill="currentColor" d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        </svg>
+      );
     case "email":
       // mail icon
       return (
@@ -67,6 +74,7 @@ const sections: Section[] = [
       { id: "bio", label: "bio" },
       { id: "interests", label: "interets" },
       { id: "education", label: "formation" },
+      { id: "skills", label: "skills" },
     ],
   },
   {
